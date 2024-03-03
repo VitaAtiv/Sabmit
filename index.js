@@ -50,11 +50,14 @@ function onInput(event) {
   // через оператор або
 
   const text = event.target.value || "Nothing";
-console.log(inputEl.classList.contains(".not-valid"));
-  if (text.length < 5) {
+  const inValid = !inputEl.classList.contains("not-valid")
+
+  if (text.length < 5 && inValid) {
     inputEl.classList.add("not-valid");
-  } else {
+    console.log("!");
+  } else if (text.length >= 5 &&  !inValid) {
     inputEl.classList.remove("not-valid");
+    console.log("-");
   }
   textEl.textContent = text;
   // через тернарну функцію
@@ -62,3 +65,33 @@ console.log(inputEl.classList.contains(".not-valid"));
   // const text = event.target.value.length === 0 ? "Nothing" : event.target.value;
   // textEl.textContent = text;
 }
+
+
+// перевірка чи є у інпут якісь символи окрім англ.
+
+function onInput(event) {
+  const text = event.target.value;
+  const nonEnglishRegex = /[^A-Za-z]/;
+  const isNotValidEngl = nonEnglishRegex.test(text);
+  if (isNotValidEngl) {
+    inputEl.classList.add("not-valid");
+  }
+
+  // чи є пробіл у строці, чи ввдедене тільки одне слово
+  // const txt = "Words"; // false
+  // const txt2 = "Wor ds"; // true
+  // console.log(txt.includes(" "));
+  // console.log(txt2.includes(" "));
+}
+
+
+const inputRange = document.querySelector(".textSize");
+const textRange = document.querySelector(".textRange");
+
+inputRange.addEventListener("input", onRange)
+function onRange(event) {
+  console.log("h");
+  console.log(event.target.);
+}
+
+

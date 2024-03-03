@@ -393,3 +393,8 @@ button {
 .check-input:checked:disabled + .check-box {
     background-color: #9b9698;;
 }
+
+
+.text-size {
+  margin-top: 20px;
+}
