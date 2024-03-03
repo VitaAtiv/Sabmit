@@ -310,14 +310,22 @@ form {
   }
 
 
+  .not-valid {
+outline: 1px solid #ff0000;
+  }
+
+
 
 button {
   display: block;
 }
 
 .inputEmail {
-  margin-bottom: 20px ;
+  margin-bottom: 5px ;
   border-radius: 3px;
+}
+.textEmail {
+   margin-bottom: 20px ;
 }
 
 /* Option */
