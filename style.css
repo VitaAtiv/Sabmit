@@ -315,7 +315,10 @@ button {
   display: block;
 }
 
-
+.inputEmail {
+  margin-bottom: 20px ;
+  border-radius: 3px;
+}
 
 /* Option */
 .option {

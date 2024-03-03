@@ -1,5 +1,6 @@
 const refs = {
   form: document.querySelector(".box"),
+
 };
 
 function onSubmit(event) {
@@ -16,3 +17,13 @@ function onSubmit(event) {
 }
 
 refs.form.addEventListener("submit", onSubmit);
+
+
+
+const inputEl = document.querySelector(".inputEmail");
+console.log(inputEl);
+inputEl.addEventListener("change", onChange);
+
+function onChange(event) {
+  console.log(event);
+}
