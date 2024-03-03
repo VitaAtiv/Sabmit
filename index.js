@@ -87,11 +87,15 @@ function onInput(event) {
 
 const inputRange = document.querySelector(".textSize");
 const textRange = document.querySelector(".textRange");
+console.log(inputRange);
+console.log(textRange);
+
 
 inputRange.addEventListener("input", onRange)
 function onRange(event) {
-  console.log("h");
-  console.log(event.target.);
+
+  console.log(event.target.value);
+  textRange.style.fontSize = `${event.target.value}px`;
 }
 
 
